@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="stile.xslt"?>
+<!DOCTYPE dati SYSTEM "definition.dtd">
+
 <dati>
 	<persona>
 		<anagrafica>
@@ -10,7 +12,7 @@
 		</anagrafica>
 		<indirizzo>
 			<toponimo>Via</toponimo>
-			<nome>Garibaldi</nome>
+			<nomeindirizzo>Garibaldi</nomeindirizzo>
 			<civico>
 				<numero>41</numero>
 				<esponente>A</esponente>
@@ -31,9 +33,10 @@
 		</anagrafica>
 		<indirizzo>
 			<toponimo>Via</toponimo>
-			<nome>Ca' Gandolfi</nome>
+			<nomeindirizzo>Ca' Gandolfi</nomeindirizzo>
 			<civico>
 				<numero>3</numero>
+				<esponente></esponente>
 			</civico>
 		</indirizzo>
 		<altridati>
@@ -51,9 +54,10 @@
 		</anagrafica>
 		<indirizzo>
 			<toponimo>Piazza</toponimo>
-			<nome>Matteotti</nome>
+			<nomeindirizzo>Matteotti</nomeindirizzo>
 			<civico>
 				<numero>12</numero>
+				<esponente></esponente>
 			</civico>
 		</indirizzo>
 		<altridati>
@@ -71,7 +75,7 @@
 		</anagrafica>
 		<indirizzo>
 			<toponimo>Via</toponimo>
-			<nome>da Urgnano</nome>
+			<nomeindirizzo>da Urgnano</nomeindirizzo>
 			<civico>
 				<numero>66</numero>
 				<esponente>6</esponente>				
