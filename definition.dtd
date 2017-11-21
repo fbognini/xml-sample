@@ -1,0 +1,19 @@
+<!DOCTYPE dati [
+<!ELEMENT dati (persona+)>
+<!ELEMENT persona (anagrafica,indirizzo,altridati)>
+<!ELEMENT anagrafica (cognome,nome+)>
+<!ELEMENT cognome (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT indirizzo (toponimo,nomeindirizzo,civico)>
+<!ELEMENT toponimo (#PCDATA)>
+<!ELEMENT nomeindirizzo (#PCDATA)>
+<!ELEMENT civico (numero,esponente)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT esponente (#PCDATA)>
+<!ELEMENT altridati (grupposanguigno?,altezza,peso,data_nascita,sesso)>
+<!ELEMENT grupposanguigno (#PCDATA)>
+<!ELEMENT altezza (#PCDATA)>
+<!ELEMENT peso (#PCDATA)>
+<!ELEMENT data_nascita (#PCDATA)>
+<!ELEMENT sesso (#PCDATA)>
+]>

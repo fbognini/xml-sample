@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="dati">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="persona" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="persona">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="anagrafica"/>
+				<xs:element ref="indirizzo"/>
+				<xs:element ref="altridati"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="anagrafica">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="cognome" type="xs:string"/>
+				<xs:element name="nome" type="xs:string" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="indirizzo">
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element name="toponimo" type="xs:string"/>
+			<xs:element name="nomeindirizzo" type="xs:string"/>
+			<xs:element ref="civico"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="civico">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="numero" type="xs:integer"/>
+				<xs:element ref="esponente"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="esponente">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="2"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="altridati">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="grupposanguigno" minOccurs="0"/>
+				<xs:element name="altezza" type="xs:decimal"/>
+				<xs:element name="peso" type="xs:decimal"/>
+				<xs:element name="data_nascita" type="xs:date"/>
+				<xs:element ref="sesso" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="grupposanguigno">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="([AB0]|AB)(-)*"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+	
+	<xs:element name="sesso">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="1"/>
+				<xs:pattern value="[MF]"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+</xs:schema>
